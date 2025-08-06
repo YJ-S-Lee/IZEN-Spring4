@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+</head>
+<body>
+  <h1>LocalDateTime</h1>
+  <ul>
+    <li>default : <span th:text="${localDateTime}"></span></li>
+    <li>yyyy-MM-dd HH:mm:ss : <span th:text="${#temporals.format(localDateTime, 'yyyy-MM-dd HH:mm:ss')}"></span></li>
+  </ul>
+  <h1>LocalDateTime - Utils</h1>
+  <ul>
+    <li>일 : <span th:text="${#temporals.day(localDateTime)}"></span></li>
+    <li>월 : <span th:text="${#temporals.month(localDateTime)}"></span></li>
+    <li>월 : <span th:text="${#temporals.monthName(localDateTime)}"></span></li>
+    <li>월 : <span th:text="${#temporals.monthNameShort(localDateTime)}"></span></li>
+    <li>년 : <span th:text="${#temporals.year(localDateTime)}"></span></li>
+    <li>날짜의 요일(일ㅇ) : <span th:text="${#temporals.dayOfWeek(localDateTime)}"></span></li>
+    <li>날짜의 요일 : <span th:text="${#temporals.dayOfWeekName(localDateTime)}"></span></li>
+    <li>날짜의 요일 : <span th:text="${#temporals.dayOfWeekNameShort(localDateTime)}"></span></li>
+    <li>시 : <span th:text="${#temporals.hour(localDateTime)}"></span></li>
+    <li>분 : <span th:text="${#temporals.minute(localDateTime)}"></span></li>
+    <li>초 : <span th:text="${#temporals.second(localDateTime)}"></span></li>
+    <li>나노초 : <span th:text="${#temporals.nanosecond(localDateTime)}"></span></li>
+  </ul>
+</body>
+</html>
