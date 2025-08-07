@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>operation</title>
+</head>
+<body>
+<h1>연산</h1>
+<ul>
+  <li>산술 연산
+    <ul>
+      <li>10+2는 얼마일까? = <span th:text="10+2"></span></li>
+      <li>10을 2로 나눈 나머지는 0이다 = <span th:text="10%2==0"></span></li>
+    </ul>
+  </li>
+  <li>비교 연산
+    <ul>
+      <li>1은 10보다 크다(이스케이프 문자) = <span th:text="1 &gt; 10"></span></li>
+      <li>1은 10보다 크다 = <span th:text="1 gt 10"></span></li>
+      <li>1은 10보다 크거나 같다 = <span th:text="1 >= 10"></span></li>
+      <li>1은 10보다 크거나 같다 = <span th:text="1 ge 10"></span></li>
+      <li>1은 10과 같다 = <span th:text="1==10"></span></li>
+      <li>1은 10이 아니다 = <span th:text="1!=10"></span></li>
+    </ul>
+  </li>
+  <li>조건식
+    <ul>
+      <li>10을 2로 나눈 나머지는 0이다. 참이면 짝수, 거짓이면 홀수? = <span th:text="(10%2==0)?짝수:홀수"></span></li>
+    </ul>
+  </li>
+  <li>Elvis 연산자
+    <ul>
+      <li>변수 data에 값이 있으면 data의 값이 나오고 없으면 '데이터가 없습니다.'라고 출력 = <span th:text="${data}?:'데이터가 없습니다.'"></span></li>
+      <li>변수 nullData에 값이 있으면 nullData의 값이 나오고 없으면 '데이터가 없습니다.'라고 출력 = <span th:text="${nullData}?:'데이터가 없습니다.'"></span></li>
+    </ul>
+  </li>
+  <li>No-Operation : _인 경우 마치 타임리프가 실행되지 않는 것처럼 동작한다.
+    <ul>
+      <li>변수 data에 값이 있으면 데이터 값이 나온다. = <span th:text="${data}?:_">데이터가 없습니다.</span></li>
+      <li>변수 nullData에 값이 있으면 HTML 내용이 나온다. = <span th:text="${nullData}?:_">데이터가 없습니다.</span></li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

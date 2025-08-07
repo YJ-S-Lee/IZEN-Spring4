@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Literal</title>
+</head>
+<body>
+<h1>리터럴</h1>
+<ul>
+<!--    문자 리터럴은 원칙상 ''로 감싸야하며 빈 공백을 토큰으로 인식하지 않는다.-->
+<!--    <li>"hello world!" = <span th:text="hello world!"></span></li>-->
+    <li>문자에 공백 있음 = <span th:text="'hello world!'"></span></li>
+    <li>문자 + 문자 = <span th:text="'hello ' + 'world!'"></span></li>
+    <li>문자 + 변수 = <span th:text="'hello '+${data}"></span></li>
+    <li>리터럴 대체(문자와 변수) = <span th:text="|hello ${data}|"></span></li>
+</ul>
+</body>
+</html>

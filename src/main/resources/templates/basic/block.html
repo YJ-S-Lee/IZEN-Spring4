@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>block</title>
+</head>
+<body>
+<p>&lt;th:block&gt; 은 렌더링 시 제거된다.</p>
+<th:block th:each="list:${lists}">
+    <div>
+        사용자 이름 : <span th:text="${list.username}"></span>
+        , 사용자 나이 : <span th:text="${list.age}"></span>
+    </div>
+    <div>
+        요약 : <span th:text="${list.username} + '/' + ${list.age}"></span>
+    </div>
+</th:block>
+</body>
+</html>

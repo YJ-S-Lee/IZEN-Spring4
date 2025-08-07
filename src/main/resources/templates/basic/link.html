@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link</title>
+</head>
+<body>
+<h1>URL 링크</h1>
+<ul>
+<!--  단순한 url-->
+<!--  http://localhost:8080/hello-->
+  <li><a th:href="@{/hello}">basic url</a></li>
+<!--  쿼리 파라미터-->
+<!--  http://localhost:8080/hello?param1=data1&param2=data2-->
+  <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">hello query param</a></li>
+<!--  경로 변수-->
+<!--  http://localhost:8080/hello/data1/data2-->
+  <li><a th:href="@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}">path variable</a></li>
+<!--  경로 변수 + 쿼리 파라미터-->
+<!--  http://localhost:8080/hello/data1?param2=data2&param3=-->
+<!--  param2=${param2}는 대응되는 값이 없다. 자동으로 쿼리 파라미터가 된다.-->
+  <li><a th:href="@{/hello/{param1}(param1=${param1}, param2=${param2})}">path variable + query param</a></li>
+</ul>
+</body>
+</html>

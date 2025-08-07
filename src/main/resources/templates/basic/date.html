@@ -13,13 +13,13 @@
   <h1>LocalDateTime - Utils</h1>
   <ul>
     <li>일 : <span th:text="${#temporals.day(localDateTime)}"></span></li>
-    <li>월 : <span th:text="${#temporals.month(localDateTime)}"></span></li>
-    <li>월 : <span th:text="${#temporals.monthName(localDateTime)}"></span></li>
-    <li>월 : <span th:text="${#temporals.monthNameShort(localDateTime)}"></span></li>
+    <li>월(.month) : <span th:text="${#temporals.month(localDateTime)}"></span></li>
+    <li>월(.monthName) : <span th:text="${#temporals.monthName(localDateTime)}"></span></li>
+    <li>월(.monthNameShort) : <span th:text="${#temporals.monthNameShort(localDateTime)}"></span></li>
     <li>년 : <span th:text="${#temporals.year(localDateTime)}"></span></li>
-    <li>날짜의 요일(일ㅇ) : <span th:text="${#temporals.dayOfWeek(localDateTime)}"></span></li>
-    <li>날짜의 요일 : <span th:text="${#temporals.dayOfWeekName(localDateTime)}"></span></li>
-    <li>날짜의 요일 : <span th:text="${#temporals.dayOfWeekNameShort(localDateTime)}"></span></li>
+    <li>날짜의 요일(.dayOfWeek, 일요일ㅇ) : <span th:text="${#temporals.dayOfWeek(localDateTime)}"></span></li>
+    <li>날짜의 요일(.dayOfWeekName) : <span th:text="${#temporals.dayOfWeekName(localDateTime)}"></span></li>
+    <li>날짜의 요일(.dayOfWeekNameShort) : <span th:text="${#temporals.dayOfWeekNameShort(localDateTime)}"></span></li>
     <li>시 : <span th:text="${#temporals.hour(localDateTime)}"></span></li>
     <li>분 : <span th:text="${#temporals.minute(localDateTime)}"></span></li>
     <li>초 : <span th:text="${#temporals.second(localDateTime)}"></span></li>

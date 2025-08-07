@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each</title>
+</head>
+<body>
+<h1>기본 테이블</h1>
+<table border="1">
+    <tr>
+        <th>no.</th>
+        <th>username</th>
+        <th>age</th>
+    </tr>
+    <tr th:each="list,listStat:${lists}">
+        <td th:text="${listStat.count}">count</td>
+        <td th:text="${list.username}">username</td>
+        <td th:text="${list.age}">age</td>
+    </tr>
+</table>
+<h1>반복 상태 유지</h1>
+<table border="1">
+    <tr>
+        <th>count</th>
+        <th>username</th>
+        <th>age</th>
+        <th>index</th>
+        <th>size</th>
+        <th>even?</th>
+        <th>odd?</th>
+        <th>first?</th>
+        <th>last?</th>
+        <th>current</th>
+    </tr>
+    <tr th:each="list,listStat:${lists}">
+        <td th:text="${listStat.count}">count</td>
+        <td th:text="${list.username}">username</td>
+        <td th:text="${list.age}">age</td>
+        <td th:text="${listStat.index}">index</td>
+        <td th:text="${listStat.size}">size</td>
+        <td th:text="${listStat.even}">even</td>
+        <td th:text="${listStat.odd}">odd</td>
+        <td th:text="${listStat.first}">first</td>
+        <td th:text="${listStat.last}">last</td>
+        <td th:text="${listStat.current}">current</td>
+    </tr>
+</table>
+</body>
+</html>
